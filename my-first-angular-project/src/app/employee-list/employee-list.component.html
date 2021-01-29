@@ -13,7 +13,7 @@
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
             <td>{{employee.email}}</td>
-            <td>{{employee.salary}}</td>
+            <td>{{employee.salary | currency:'USD'}}</td>
             <td><div *ngIf="employee.salary > 1000 ;else elseSection">Yes</div>
                 <ng-template #elseSection>No</ng-template>
             </td>
