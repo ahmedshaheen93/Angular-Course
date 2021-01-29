@@ -10,8 +10,8 @@ export class EmployeeListComponent implements OnInit {
 
   employees :Employee[]= [
     new Employee("ahmed","shaheen","ahmedshaheen676@yahoo.com",1000),
-    new Employee("amr","elbaz","amrelbaz12345@gmail.com",1000),
-    new Employee("mohamed","elsayed","mohamedelsayed@gmail.com",1000)
+    new Employee("amr","elbaz","amrelbaz12345@gmail.com",2000),
+    new Employee("mohamed","elsayed","mohamedelsayed@gmail.com",3000)
   ];
   constructor() { }
 

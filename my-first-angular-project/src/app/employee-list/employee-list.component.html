@@ -1,18 +1,22 @@
-<table border="2">
-    <thead>
+<table class="table table-hover">
+    <thead class="thead-dark">
         <tr>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Email</td>
-            <td>Salary</td>
+            <td scope="col">First Name</td>
+            <td scope="col">Last Name</td>
+            <td scope="col">Email</td>
+            <td scope="col">Salary</td>
+            <td scope="col">Meta ?</td>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr *ngFor="let employee of employees" scope="row">
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
             <td>{{employee.email}}</td>
             <td>{{employee.salary}}</td>
+            <td><div *ngIf="employee.salary > 1000 ;else elseSection">Yes</div>
+                <ng-template #elseSection>No</ng-template>
+            </td>
         </tr>
     </tbody>
 </table>
